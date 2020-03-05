@@ -1,0 +1,7 @@
+[package]
+name = "split_grpc_transport"
+version = "0.1.0"
+authors = ["Conrad Grobler <grobler@google.com>"]
+edition = "2018"
+
+[dependencies]
