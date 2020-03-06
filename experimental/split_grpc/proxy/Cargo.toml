@@ -9,4 +9,6 @@ license = "Apache-2.0"
 env_logger = "*"
 futures = "*"
 log = "*"
+split_grpc_transport = "*"
+structopt = "*"
 tokio = { version = "*", features = ["full"] }

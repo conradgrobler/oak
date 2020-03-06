@@ -16,15 +16,19 @@
 
 use futures::stream::StreamExt;
 use log::{error, info};
-use tokio::{
-    io,
-    net::{TcpListener, TcpStream},
-    spawn,
-};
+use split_grpc_transport::{Opt, tcp::TcpConnector, Transport};
+use structopt::StructOpt;
+use tokio::{io, net::{TcpListener, TcpStream}};
+use tokio::spawn;
 
 #[tokio::main]
 async fn main() -> io::Result<()> {
     env_logger::init();
+    let opt = Opt::from_args();
+    let connector = match opt.transport {
+        Transport::Tcp => TcpConnector::new(),
+        _ => Err("Transport not supported"),
+    };
     let in_address = "[::1]:50051";
     let listener = TcpListener::bind(in_address).await?;
     info!("Proxy listening on {:?}", in_address);

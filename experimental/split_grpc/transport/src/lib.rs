@@ -14,10 +14,54 @@
 // limitations under the License.
 //
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
+use async_trait::async_trait;
+use std::fmt::{Display, Formatter};
+use std::str::FromStr;
+use structopt::StructOpt;
+use tokio::io::{self, AsyncRead, AsyncWrite};
+use tonic::transport::server::Connected;
+
+pub mod tcp;
+pub mod uds;
+
+#[derive(Debug)]
+pub enum Transport {
+    Tcp,
+    Uds,
+}
+
+#[derive(Debug)]
+pub struct TransportParseError {}
+
+impl Display for TransportParseError {
+    fn fmt(&self, fmt: &mut Formatter<'_>) -> std::fmt::Result {
+        fmt.write_str("Invalid transport")
     }
+}
+
+impl FromStr for Transport {
+    type Err = TransportParseError;
+    fn from_str(transport: &str) -> Result<Self, Self::Err> {
+        match transport.to_lowercase().as_str() {
+            "tcp" => Ok(Transport::Tcp),
+            "uds" => Ok(Transport::Uds),
+            _ => Err(TransportParseError {}),
+        }
+    }
+}
+
+#[derive(Debug, StructOpt)]
+pub struct Opt {
+    #[structopt(short, long, default_value = "tcp")]
+    pub transport: Transport,
+}
+
+pub trait ConnectedStream:
+    AsyncRead + AsyncWrite + Connected + Unpin + Send + 'static
+{
+}
+
+#[async_trait]
+pub trait Connector {
+    async fn connect(&self, incoming_addr: &str) -> io::Result<Box<dyn ConnectedStream>>;
 }

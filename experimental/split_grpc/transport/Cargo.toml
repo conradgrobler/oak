@@ -5,3 +5,7 @@ authors = ["Conrad Grobler <grobler@google.com>"]
 edition = "2018"
 
 [dependencies]
+async-trait = "*"
+structopt = "*"
+tokio = { version = "*", features = ["macros", "stream", "tcp", "uds"] }
+tonic = "*"
