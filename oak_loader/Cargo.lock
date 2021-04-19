@@ -1598,7 +1598,7 @@ dependencies = [
  "oak_sign",
  "openssl",
  "prost",
- "rustls 0.19.0",
+ "rustls 0.18.1",
  "serde",
  "signal-hook",
  "structopt",
@@ -2960,15 +2960,17 @@ dependencies = [
 
 [[package]]
 name = "tink-gcpkms"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f42152aa3dd4642d207a0cffcf754ca18ccaf2ba9651fb8a52d4c9274fe613bc"
+checksum = "e30cc5a47f5a504d64a924baa934fa5e6b8a07b370b2064e75e3277abdf3af12"
 dependencies = [
  "base64 0.13.0",
+ "chrono",
  "futures",
  "http",
  "hyper 0.14.4",
  "hyper-rustls 0.22.1",
+ "lazy_static",
  "percent-encoding",
  "serde",
  "serde_json",
