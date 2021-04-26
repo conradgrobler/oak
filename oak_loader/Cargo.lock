@@ -951,7 +951,7 @@ dependencies = [
  "http",
  "indexmap",
  "slab",
- "tokio 1.2.0",
+ "tokio 1.5.0",
  "tokio-util 0.6.3",
  "tracing",
  "tracing-futures",
@@ -1108,7 +1108,7 @@ dependencies = [
  "itoa",
  "pin-project 1.0.2",
  "socket2",
- "tokio 1.2.0",
+ "tokio 1.5.0",
  "tower-service",
  "tracing",
  "want",
@@ -1144,7 +1144,7 @@ dependencies = [
  "log",
  "rustls 0.19.0",
  "rustls-native-certs",
- "tokio 1.2.0",
+ "tokio 1.5.0",
  "tokio-rustls 0.22.0",
  "webpki",
 ]
@@ -1599,7 +1599,7 @@ dependencies = [
  "oak_sign",
  "openssl",
  "prost",
- "rustls 0.19.0",
+ "rustls 0.18.1",
  "serde",
  "signal-hook",
  "structopt",
@@ -2523,9 +2523,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.60"
+version = "1.0.64"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1500e84d27fe482ed1dc791a56eddc2f230046a040fa908c08bda1d9fb615779"
+checksum = "799e97dc9fdae36a5c8b8f2cae9ce2ee9fdce2058c57a93e6099d919fd982f79"
 dependencies = [
  "itoa",
  "ryu",
@@ -2961,20 +2961,22 @@ dependencies = [
 
 [[package]]
 name = "tink-gcpkms"
-version = "0.1.1"
+version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f42152aa3dd4642d207a0cffcf754ca18ccaf2ba9651fb8a52d4c9274fe613bc"
+checksum = "fddf33241f3fe32a765397103a97f7cbea49818f860e0d45a1b5138fc55e381e"
 dependencies = [
  "base64 0.13.0",
+ "chrono",
  "futures",
  "http",
  "hyper 0.14.4",
  "hyper-rustls 0.22.1",
+ "lazy_static",
  "percent-encoding",
  "serde",
  "serde_json",
  "tink-core",
- "tokio 1.2.0",
+ "tokio 1.5.0",
  "yup-oauth2",
 ]
 
@@ -3076,9 +3078,9 @@ dependencies = [
 
 [[package]]
 name = "tokio"
-version = "1.2.0"
+version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e8190d04c665ea9e6b6a0dc45523ade572c088d2e6566244c1122671dbf4ae3a"
+checksum = "83f0c8e7c0addab50b663055baf787d0af7f413a46e6e7fb9559a4e4db7137a5"
 dependencies = [
  "autocfg",
  "bytes 1.0.1",
@@ -3130,7 +3132,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bc6844de72e57df1980054b38be3a9f4702aba4858be64dd700181a8a6d0e1b6"
 dependencies = [
  "rustls 0.19.0",
- "tokio 1.2.0",
+ "tokio 1.5.0",
  "webpki",
 ]
 
@@ -3169,7 +3171,7 @@ dependencies = [
  "futures-sink",
  "log",
  "pin-project-lite 0.2.4",
- "tokio 1.2.0",
+ "tokio 1.5.0",
 ]
 
 [[package]]
@@ -3819,9 +3821,9 @@ checksum = "b07db065a5cf61a7e4ba64f29e67db906fb1787316516c4e6e5ff0fea1efcd8a"
 
 [[package]]
 name = "yup-oauth2"
-version = "5.0.3"
+version = "5.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72c6dfbc7a0d18f43774daf38bd5c895f1cf3f39105770acfa1ae4ccbf3b0113"
+checksum = "2573621fa28865489bdf556cdb8703604f4e8498612e3041a212ac20e59c4aeb"
 dependencies = [
  "base64 0.13.0",
  "chrono",
@@ -3835,7 +3837,7 @@ dependencies = [
  "seahash",
  "serde",
  "serde_json",
- "tokio 1.2.0",
+ "tokio 1.5.0",
  "url",
 ]
 
