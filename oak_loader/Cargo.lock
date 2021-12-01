@@ -854,9 +854,9 @@ dependencies = [
 
 [[package]]
 name = "http-body"
-version = "0.4.3"
+version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "399c583b2979440c60be0821a6199eca73bc3c8dcd9d070d75ac726e2c6186e5"
+checksum = "1ff4f84919677303da5f147645dbea6b1881f368d03ac84e1dc09031ebd7b2c6"
 dependencies = [
  "bytes",
  "http",
@@ -1238,7 +1238,7 @@ name = "oak_abi"
 version = "0.1.0"
 dependencies = [
  "oak_utils",
- "prost",
+ "prost 0.8.0",
  "prost-build",
  "prost-types",
  "serde",
@@ -1278,7 +1278,7 @@ dependencies = [
  "oak_abi",
  "oak_derive",
  "oak_utils",
- "prost",
+ "prost 0.8.0",
  "prost-build",
  "prost-types",
 ]
@@ -1298,7 +1298,7 @@ dependencies = [
  "oak_runtime",
  "oak_sign",
  "openssl",
- "prost",
+ "prost 0.8.0",
  "rustls",
  "serde",
  "signal-hook",
@@ -1322,7 +1322,7 @@ dependencies = [
  "oak_attestation_common",
  "oak_utils",
  "openssl",
- "prost",
+ "prost 0.8.0",
  "structopt",
  "tokio",
  "tonic",
@@ -1354,7 +1354,7 @@ dependencies = [
  "oak_sign",
  "oak_utils",
  "prometheus",
- "prost",
+ "prost 0.8.0",
  "prost-build",
  "prost-types",
  "rand 0.8.4",
@@ -1391,7 +1391,7 @@ dependencies = [
  "oak_abi",
  "oak_io",
  "oak_utils",
- "prost",
+ "prost 0.8.0",
  "prost-build",
  "prost-types",
 ]
@@ -1419,7 +1419,7 @@ name = "oak_utils"
 version = "0.1.0"
 dependencies = [
  "proc-macro2",
- "prost",
+ "prost 0.8.0",
  "prost-build",
  "quote",
  "tempfile",
@@ -1712,7 +1712,17 @@ name = "prost"
 version = "0.8.0"
 dependencies = [
  "bytes",
- "prost-derive",
+ "prost-derive 0.8.0",
+]
+
+[[package]]
+name = "prost"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "444879275cb4fd84958b1a1d5420d15e6fcf7c235fe47f053c9c2a80aceb6001"
+dependencies = [
+ "bytes",
+ "prost-derive 0.9.0",
 ]
 
 [[package]]
@@ -1725,7 +1735,7 @@ dependencies = [
  "log",
  "multimap",
  "petgraph",
- "prost",
+ "prost 0.8.0",
  "prost-types",
  "tempfile",
  "which",
@@ -1743,11 +1753,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "prost-derive"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f9cc1a3263e07e0bf68e96268f37665207b49560d98739662cdfaae215c720fe"
+dependencies = [
+ "anyhow",
+ "itertools",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "prost-types"
 version = "0.8.0"
 dependencies = [
  "bytes",
- "prost",
+ "prost 0.8.0",
 ]
 
 [[package]]
@@ -2442,7 +2465,7 @@ dependencies = [
  "aes-gcm-siv",
  "chacha20poly1305",
  "generic-array",
- "prost",
+ "prost 0.8.0",
  "rand 0.7.3",
  "tink-core",
  "tink-mac",
@@ -2474,7 +2497,7 @@ dependencies = [
  "digest",
  "hkdf",
  "lazy_static",
- "prost",
+ "prost 0.8.0",
  "rand 0.7.3",
  "serde",
  "serde_json",
@@ -2492,7 +2515,7 @@ checksum = "da6421c6c1247f8620877c3338505c79478a0eedcfdb5423d813627ea4621aba"
 dependencies = [
  "aead",
  "aes-siv",
- "prost",
+ "prost 0.8.0",
  "tink-core",
  "tink-proto",
 ]
@@ -2524,7 +2547,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ee2170f45ea019dfe1db46d54f343aa1dd780b2f317e1fb0e0ed036e4d36f317"
 dependencies = [
- "prost",
+ "prost 0.8.0",
  "tink-core",
  "tink-prf",
  "tink-proto",
@@ -2541,7 +2564,7 @@ dependencies = [
  "digest",
  "hkdf",
  "hmac",
- "prost",
+ "prost 0.8.0",
  "sha-1",
  "sha2",
  "tink-core",
@@ -2555,7 +2578,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73e6e254d64e8fabbe14cc30bf50e20e914eb0c7a8757e33fc0432327362cfe2"
 dependencies = [
  "base64 0.13.0",
- "prost",
+ "prost 0.8.0",
  "prost-build",
  "serde",
 ]
@@ -2570,7 +2593,7 @@ dependencies = [
  "ed25519-dalek",
  "generic-array",
  "p256",
- "prost",
+ "prost 0.8.0",
  "rand 0.7.3",
  "signature",
  "tink-core",
@@ -2689,9 +2712,9 @@ dependencies = [
 
 [[package]]
 name = "tonic"
-version = "0.5.2"
+version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "796c5e1cd49905e65dd8e700d4cb1dffcbfdb4fc9d017de08c1a537afd83627c"
+checksum = "24203b79cf2d68909da91178db3026e77054effba0c5d93deb870d3ca7b35afa"
 dependencies = [
  "async-stream",
  "async-trait",
@@ -2706,8 +2729,8 @@ dependencies = [
  "hyper-timeout",
  "percent-encoding",
  "pin-project",
- "prost",
- "prost-derive",
+ "prost 0.9.0",
+ "prost-derive 0.9.0",
  "tokio",
  "tokio-rustls",
  "tokio-stream",
