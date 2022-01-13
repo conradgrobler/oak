@@ -584,9 +584,9 @@ dependencies = [
 
 [[package]]
 name = "fixedbitset"
-version = "0.2.0"
+version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "37ab347416e802de484e4d03c7316c48f1ecb56574dfd4a46a80f173ce1de04d"
+checksum = "279fb028e20b3c4c320317955b77c5e0c9701f05a1d309905d6fc702cdc5053e"
 
 [[package]]
 name = "fnv"
@@ -920,7 +920,6 @@ dependencies = [
  "tokio",
  "tokio-rustls 0.22.0",
  "webpki 0.21.4",
- "webpki-roots",
 ]
 
 [[package]]
@@ -934,6 +933,7 @@ dependencies = [
  "rustls 0.20.2",
  "tokio",
  "tokio-rustls 0.23.1",
+ "webpki-roots 0.22.2",
 ]
 
 [[package]]
@@ -1265,7 +1265,7 @@ dependencies = [
  "log",
  "openssl",
  "ring",
- "rustls 0.19.1",
+ "rustls 0.20.2",
  "serde",
  "serde_json",
  "sha2",
@@ -1312,7 +1312,7 @@ dependencies = [
  "oak_sign",
  "openssl",
  "prost",
- "rustls 0.19.1",
+ "rustls 0.20.2",
  "serde",
  "signal-hook",
  "structopt",
@@ -1355,7 +1355,7 @@ dependencies = [
  "hex",
  "http",
  "hyper",
- "hyper-rustls 0.22.1",
+ "hyper-rustls 0.23.0",
  "itertools",
  "jsonwebtoken",
  "lazy_static",
@@ -1374,7 +1374,7 @@ dependencies = [
  "regex",
  "reqwest",
  "roughenough",
- "rustls 0.19.1",
+ "rustls 0.20.2",
  "serde",
  "serde_json",
  "sha2",
@@ -1388,7 +1388,7 @@ dependencies = [
  "tink-proto",
  "tink-signature",
  "tokio",
- "tokio-rustls 0.22.0",
+ "tokio-rustls 0.23.1",
  "tokio-stream",
  "tonic",
  "wasmi",
@@ -1575,9 +1575,9 @@ checksum = "d4fd5641d01c8f18a23da7b6fe29298ff4b55afcccdf78973b24cf3175fee32e"
 
 [[package]]
 name = "petgraph"
-version = "0.5.1"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "467d164a6de56270bd7c4d070df81d07beace25012d5103ced4e9ff08d6afdb7"
+checksum = "4a13a2fa9d0b63e5f22328828741e523766fff0ee9e779316902290dff3f824f"
 dependencies = [
  "fixedbitset",
  "indexmap",
@@ -1943,7 +1943,7 @@ dependencies = [
  "wasm-bindgen",
  "wasm-bindgen-futures",
  "web-sys",
- "webpki-roots",
+ "webpki-roots 0.21.1",
  "winreg",
 ]
 
@@ -3103,6 +3103,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aabe153544e473b775453675851ecc86863d2a81d786d741f6b76778f2a48940"
 dependencies = [
  "webpki 0.21.4",
+]
+
+[[package]]
+name = "webpki-roots"
+version = "0.22.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "552ceb903e957524388c4d3475725ff2c8b7960922063af6ce53c9a43da07449"
+dependencies = [
+ "webpki 0.22.0",
 ]
 
 [[package]]
