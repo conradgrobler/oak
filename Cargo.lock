@@ -550,16 +550,16 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "3.1.8"
+version = "3.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "71c47df61d9e16dc010b55dba1952a57d8c215dbb533fd13cdd13369aac73b1c"
+checksum = "6aad2534fad53df1cc12519c5cda696dd3e20e6118a027e24054aea14a0bdcbe"
 dependencies = [
  "atty",
  "bitflags",
  "clap_derive",
+ "clap_lex",
  "indexmap",
  "lazy_static",
- "os_str_bytes",
  "strsim",
  "termcolor",
  "textwrap 0.15.0",
@@ -571,7 +571,7 @@ version = "3.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "df6f3613c0a3cddfd78b41b10203eb322cb29b600cbdf808a7d3db95691b8e25"
 dependencies = [
- "clap 3.1.8",
+ "clap 3.1.9",
 ]
 
 [[package]]
@@ -585,6 +585,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "189ddd3b5d32a70b35e7686054371742a937b0d99128e76dde6340210e966669"
+dependencies = [
+ "os_str_bytes",
 ]
 
 [[package]]
@@ -1236,14 +1245,14 @@ checksum = "279fb028e20b3c4c320317955b77c5e0c9701f05a1d309905d6fc702cdc5053e"
 
 [[package]]
 name = "flate2"
-version = "1.0.22"
+version = "1.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e6988e897c1c9c485f43b47a529cef42fde0547f9d8d41a7062518f1d8fc53f"
+checksum = "b39522e96686d38f4bc984b9198e3a0613264abaebaff2c5c918bfa6b6da09af"
 dependencies = [
  "cfg-if",
  "crc32fast",
  "libc",
- "miniz_oxide 0.4.4",
+ "miniz_oxide 0.5.1",
 ]
 
 [[package]]
@@ -1511,7 +1520,7 @@ dependencies = [
  "indexmap",
  "slab",
  "tokio",
- "tokio-util",
+ "tokio-util 0.7.1",
  "tracing",
 ]
 
@@ -2054,7 +2063,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "bytes",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "location_utils",
  "log",
@@ -2069,7 +2078,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "bytes",
- "clap 3.1.8",
+ "clap 3.1.9",
  "location_utils",
  "multimap",
  "oak_functions_abi",
@@ -2173,7 +2182,7 @@ name = "metrics_client"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "oak_functions_abi",
  "oak_functions_client",
  "tokio",
@@ -2505,7 +2514,7 @@ dependencies = [
  "async-stream",
  "async-trait",
  "base64",
- "clap 3.1.8",
+ "clap 3.1.9",
  "ecdsa",
  "env_logger 0.9.0",
  "grpc_unary_attestation",
@@ -2548,7 +2557,7 @@ dependencies = [
  "byteorder",
  "bytes",
  "chrono",
- "clap 3.1.8",
+ "clap 3.1.9",
  "criterion",
  "futures",
  "grpc_unary_attestation",
@@ -2687,7 +2696,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-stream",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "futures",
  "futures-core",
@@ -2697,7 +2706,7 @@ dependencies = [
  "log",
  "oak_attestation_common",
  "rustls",
- "rustls-pemfile 0.3.0",
+ "rustls-pemfile 1.0.0",
  "serde",
  "serde_json",
  "sha2 0.10.2",
@@ -2727,7 +2736,7 @@ name = "oak_proxy_attestation"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "futures",
  "futures-core",
@@ -2763,7 +2772,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "async-stream",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "futures",
  "futures-core",
@@ -2773,7 +2782,7 @@ dependencies = [
  "log",
  "oak_attestation_common",
  "rustls",
- "rustls-pemfile 0.3.0",
+ "rustls-pemfile 1.0.0",
  "sha2 0.10.2",
  "tokio",
  "tokio-rustls",
@@ -2873,9 +2882,6 @@ name = "os_str_bytes"
 version = "6.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8e22443d1643a904602595ba1cd8f7d896afe56d26712531c5ff73a15b2fbf64"
-dependencies = [
- "memchr",
-]
 
 [[package]]
 name = "p256"
@@ -3604,6 +3610,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustls-pemfile"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e7522c9de787ff061458fe9a829dc790a3f5b22dc571694fc5883f448b94d9a9"
+dependencies = [
+ "base64",
+]
+
+[[package]]
 name = "rustversion"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4032,7 +4047,7 @@ name = "tensorflow_client"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "flate2",
  "hyper",
@@ -4055,7 +4070,7 @@ dependencies = [
  "anyhow",
  "async-stream",
  "bytes",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "futures",
  "grpc_unary_attestation",
@@ -4259,12 +4274,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "tokio-serde-cbor"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "23c8004e322e2509b9c7c4c0a48b7770a9657d8f1772791ea7c2f6c39e82568e"
+dependencies = [
+ "bytes",
+ "serde",
+ "serde_cbor",
+ "tokio-util 0.6.9",
+]
+
+[[package]]
 name = "tokio-stream"
 version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "50145484efff8818b5ccd256697f36863f587da82cf8b409c53adf1e840798e3"
 dependencies = [
  "futures-core",
+ "pin-project-lite",
+ "tokio",
+]
+
+[[package]]
+name = "tokio-util"
+version = "0.6.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9e99e1983e5d376cd8eb4b66604d2e99e79f5bd988c3055891dcd8c9e2604cc0"
+dependencies = [
+ "bytes",
+ "futures-core",
+ "futures-sink",
+ "log",
  "pin-project-lite",
  "tokio",
 ]
@@ -4319,7 +4360,7 @@ dependencies = [
  "tokio",
  "tokio-rustls",
  "tokio-stream",
- "tokio-util",
+ "tokio-util 0.7.1",
  "tower",
  "tower-layer",
  "tower-service",
@@ -4372,7 +4413,7 @@ dependencies = [
  "rand 0.8.5",
  "slab",
  "tokio",
- "tokio-util",
+ "tokio-util 0.7.1",
  "tower-layer",
  "tower-service",
  "tracing",
@@ -4718,7 +4759,7 @@ name = "trusted_shuffler_backend"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "futures-core",
  "futures-util",
@@ -4733,7 +4774,7 @@ name = "trusted_shuffler_client"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "http",
  "hyper",
@@ -4757,7 +4798,7 @@ name = "trusted_shuffler_server"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "env_logger 0.9.0",
  "futures-core",
  "futures-util",
@@ -4791,13 +4832,15 @@ name = "uefi-loader"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "clap 3.1.8",
+ "clap 3.1.9",
  "command-fds",
  "env_logger 0.9.0",
  "futures",
  "log",
+ "serde",
  "tokio",
- "tokio-util",
+ "tokio-serde-cbor",
+ "tokio-util 0.6.9",
 ]
 
 [[package]]
@@ -5427,9 +5470,9 @@ dependencies = [
 
 [[package]]
 name = "x509-parser"
-version = "0.13.1"
+version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e64bcfe6a33d9a2d5451de520881469863bd05a095f6b6f7f2ad1a5cd8d4ea2f"
+checksum = "9fb9bace5b5589ffead1afb76e43e34cff39cd0f3ce7e170ae0c29e53b88eb1c"
 dependencies = [
  "asn1-rs",
  "base64",
@@ -5460,7 +5503,7 @@ dependencies = [
  "async-trait",
  "cargo_metadata",
  "chrono",
- "clap 3.1.8",
+ "clap 3.1.9",
  "clap_complete",
  "colored",
  "itertools",
