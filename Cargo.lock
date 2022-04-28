@@ -5493,7 +5493,7 @@ dependencies = [
  "serde",
  "tokio",
  "tokio-serde-cbor",
- "tokio-util 0.6.9",
+ "tokio-util 0.7.1",
  "tonic",
 ]
 
