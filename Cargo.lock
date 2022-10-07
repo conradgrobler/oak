@@ -2011,9 +2011,9 @@ checksum = "884e2677b40cc8c339eaefcb701c32ef1fd2493d71118dc0ca4b6a736c93bd67"
 
 [[package]]
 name = "libc"
-version = "0.2.126"
+version = "0.2.134"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
+checksum = "329c933548736bc49fd575ee68c89e8be4d260064184389a5b77517cddd99ffb"
 
 [[package]]
 name = "libm"
@@ -2840,7 +2840,7 @@ dependencies = [
  "bitvec",
  "goblin",
  "lazy_static",
- "libm 0.1.4",
+ "libm 0.2.5",
  "linked_list_allocator",
  "log",
  "oak_baremetal_communication_channel",
@@ -2859,7 +2859,7 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "flatbuffers",
- "hashbrown 0.11.2",
+ "hashbrown 0.12.2",
  "oak_idl",
  "oak_idl_gen_services",
  "oak_idl_gen_structs",
