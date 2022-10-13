@@ -1860,7 +1860,7 @@ dependencies = [
 name = "key_value_lookup"
 version = "0.1.0"
 dependencies = [
- "hashbrown 0.11.2",
+ "hashbrown 0.12.2",
  "http",
  "maplit",
  "oak_functions",
@@ -2673,7 +2673,7 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "flatbuffers",
- "hashbrown 0.11.2",
+ "hashbrown 0.12.2",
  "oak_idl",
  "oak_idl_gen_services",
  "oak_idl_gen_structs",
@@ -2751,9 +2751,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.13.0"
+version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "18a6dbe30758c9f83eb00cbea4ac95966305f5a7772f3f42ebfc7fc7eddbd8e1"
+checksum = "e82dad04139b71a90c080c8463fe0dc7902db5192d939bd0950f074d014339e1"
 
 [[package]]
 name = "opaque-debug"
@@ -4102,7 +4102,7 @@ dependencies = [
  "http",
  "hyper",
  "log",
- "nix 0.22.3",
+ "nix 0.24.2",
  "oak_functions_abi",
  "oak_functions_client",
  "oak_remote_attestation",
