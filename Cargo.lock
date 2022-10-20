@@ -1164,9 +1164,9 @@ dependencies = [
 
 [[package]]
 name = "env_logger"
-version = "0.9.0"
+version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b2cf0344971ee6c64c31be0d530793fba457d322dfec2810c453d0ef228f9c3"
+checksum = "c90bf5f19754d10198ccb95b70664fc925bd1fc090a0fd9a6ebc54acc8cd6272"
 dependencies = [
  "atty",
  "humantime",
@@ -1237,7 +1237,7 @@ version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "21e16290574b39ee41c71aeb90ae960c504ebaf1e2a1c87bd52aa56ed6e1a02f"
 dependencies = [
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "log",
 ]
 
@@ -1957,7 +1957,7 @@ dependencies = [
  "anyhow",
  "bytes",
  "clap",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "location_utils",
  "log",
  "oak_functions_abi",
@@ -2277,7 +2277,7 @@ dependencies = [
  "base64",
  "clap",
  "ecdsa 0.13.4",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "hex",
  "http",
  "log",
@@ -2341,7 +2341,7 @@ dependencies = [
  "bmrng",
  "clap",
  "command-fds",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "flatbuffers",
  "futures",
  "hashbrown 0.12.2",
@@ -2677,7 +2677,7 @@ dependencies = [
  "bitflags",
  "bitvec",
  "goblin",
- "hashbrown 0.11.2",
+ "hashbrown 0.12.2",
  "lazy_static",
  "libc",
  "libm 0.2.5",
@@ -2755,7 +2755,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "log",
  "offline_attestation_shared",
  "reqwest",
@@ -2771,7 +2771,7 @@ dependencies = [
  "anyhow",
  "bytes",
  "clap",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "log",
  "offline_attestation_shared",
  "serde_json",
@@ -4606,7 +4606,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "futures-core",
  "futures-util",
  "http",
@@ -4624,7 +4624,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "futures",
  "http",
  "hyper",
@@ -4654,7 +4654,7 @@ dependencies = [
  "anyhow",
  "async-trait",
  "clap",
- "env_logger 0.9.0",
+ "env_logger 0.9.1",
  "futures-core",
  "futures-util",
  "http",
