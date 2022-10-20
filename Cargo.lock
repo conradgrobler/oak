@@ -308,7 +308,7 @@ name = "benchmark"
 version = "0.1.0"
 dependencies = [
  "oak_functions_sdk",
- "prost 0.10.4",
+ "prost 0.11.0",
  "prost-build 0.10.4",
 ]
 
@@ -1961,7 +1961,7 @@ dependencies = [
  "location_utils",
  "log",
  "oak_functions_abi",
- "prost 0.10.4",
+ "prost 0.11.0",
  "serde",
 ]
 
@@ -1975,7 +1975,7 @@ dependencies = [
  "location_utils",
  "multimap",
  "oak_functions_abi",
- "prost 0.10.4",
+ "prost 0.11.0",
  "rand 0.8.5",
  "serde",
  "serde_json",
@@ -2260,7 +2260,7 @@ name = "oak_functions_abi"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "prost 0.10.4",
+ "prost 0.11.0",
  "prost-build 0.10.4",
  "serde",
  "static_assertions",
@@ -2288,7 +2288,7 @@ dependencies = [
  "oak_remote_attestation_sessions_client",
  "oak_utils",
  "p256 0.10.1",
- "prost 0.10.4",
+ "prost 0.11.0",
  "regex",
  "serde",
  "serde_jcs",
@@ -2353,7 +2353,7 @@ dependencies = [
  "oak_idl_gen_structs",
  "oak_remote_attestation_sessions",
  "oak_utils",
- "prost 0.10.4",
+ "prost 0.11.0",
  "serde",
  "tokio",
  "tonic",
@@ -2385,7 +2385,7 @@ dependencies = [
  "oak_channel",
  "oak_functions_freestanding",
  "oak_remote_attestation",
- "prost 0.10.4",
+ "prost 0.11.0",
  "prost-build 0.10.4",
  "ringbuf",
  "vsock",
@@ -2472,7 +2472,7 @@ dependencies = [
  "oak_functions_client",
  "oak_remote_attestation",
  "port_check",
- "prost 0.10.4",
+ "prost 0.11.0",
  "tempfile",
  "tokio",
 ]
@@ -2527,7 +2527,7 @@ dependencies = [
  "oak_remote_attestation_amd",
  "oak_remote_attestation_sessions",
  "oak_remote_attestation_sessions_client",
- "prost 0.10.4",
+ "prost 0.11.0",
  "prost-build 0.10.4",
  "reqwest",
  "wasm-bindgen",
@@ -2558,7 +2558,7 @@ dependencies = [
  "oak_remote_attestation_sessions",
  "oak_remote_attestation_sessions_client",
  "oak_utils",
- "prost 0.10.4",
+ "prost 0.11.0",
  "serde",
  "tokio",
  "tonic",
@@ -2677,7 +2677,7 @@ dependencies = [
  "bitflags",
  "bitvec",
  "goblin",
- "hashbrown 0.11.2",
+ "hashbrown 0.12.2",
  "lazy_static",
  "libc",
  "libm 0.2.5",
@@ -2723,7 +2723,7 @@ dependencies = [
 name = "oak_utils"
 version = "0.1.0"
 dependencies = [
- "prost 0.10.4",
+ "prost 0.9.0",
  "prost-build 0.10.4",
  "tempfile",
  "tonic-build",
@@ -3092,6 +3092,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "prost"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "399c3c31cdec40583bb68f0b18403400d01ec4289c383aa047560439952c4dd7"
+dependencies = [
+ "bytes",
+ "prost-derive 0.11.0",
+]
+
+[[package]]
 name = "prost-build"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3151,6 +3161,19 @@ name = "prost-derive"
 version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7b670f45da57fb8542ebdbb6105a925fe571b67f9e7ed9f47a06a84e72b4e7cc"
+dependencies = [
+ "anyhow",
+ "itertools",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "prost-derive"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7345d5f0e08c0536d7ac7229952590239e77abf0a0100a1b1d890add6ea96364"
 dependencies = [
  "anyhow",
  "itertools",
@@ -4612,7 +4635,7 @@ dependencies = [
  "http",
  "hyper",
  "log",
- "prost 0.10.4",
+ "prost 0.11.0",
  "tokio",
  "tonic",
  "tonic-build",
@@ -4641,7 +4664,7 @@ dependencies = [
  "anyhow",
  "http",
  "hyper",
- "prost 0.10.4",
+ "prost 0.11.0",
  "tokio",
  "tonic",
  "tonic-build",
