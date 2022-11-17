@@ -343,7 +343,7 @@ name = "benchmark"
 version = "0.1.0"
 dependencies = [
  "oak_functions_sdk",
- "prost 0.11.0",
+ "prost 0.11.2",
  "prost-build 0.11.1",
 ]
 
@@ -2061,7 +2061,7 @@ dependencies = [
  "location_utils",
  "log",
  "oak_functions_abi",
- "prost 0.11.0",
+ "prost 0.11.2",
  "serde",
 ]
 
@@ -2075,7 +2075,7 @@ dependencies = [
  "location_utils",
  "multimap",
  "oak_functions_abi",
- "prost 0.11.0",
+ "prost 0.11.2",
  "rand 0.8.5",
  "serde",
  "serde_json",
@@ -2352,7 +2352,7 @@ dependencies = [
  "log",
  "oak_idl",
  "oak_idl_build",
- "prost 0.11.0",
+ "prost 0.11.2",
 ]
 
 [[package]]
@@ -2360,7 +2360,7 @@ name = "oak_functions_abi"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "prost 0.11.0",
+ "prost 0.11.2",
  "prost-build 0.11.1",
  "serde",
  "static_assertions",
@@ -2384,7 +2384,7 @@ dependencies = [
  "oak_functions_abi",
  "oak_remote_attestation_noninteractive",
  "p256 0.10.1",
- "prost 0.11.0",
+ "prost 0.11.2",
  "regex",
  "serde",
  "serde_jcs",
@@ -2422,7 +2422,7 @@ dependencies = [
  "oak_logger",
  "oak_remote_attestation",
  "oak_remote_attestation_amd",
- "prost 0.11.0",
+ "prost 0.11.2",
  "tokio",
 ]
 
@@ -2444,7 +2444,7 @@ dependencies = [
  "oak_idl",
  "oak_idl_build",
  "oak_remote_attestation_noninteractive",
- "prost 0.11.0",
+ "prost 0.11.2",
  "serde",
  "tokio",
  "tonic 0.8.2",
@@ -2476,7 +2476,7 @@ dependencies = [
  "oak_channel",
  "oak_functions_freestanding",
  "oak_remote_attestation",
- "prost 0.11.0",
+ "prost 0.11.2",
  "prost-build 0.11.1",
  "ringbuf",
  "vsock",
@@ -2562,7 +2562,7 @@ dependencies = [
  "oak_functions_client",
  "oak_remote_attestation_noninteractive",
  "port_check",
- "prost 0.11.0",
+ "prost 0.11.2",
  "tempfile",
  "tokio",
 ]
@@ -2610,7 +2610,7 @@ dependencies = [
  "oak_remote_attestation_amd",
  "oak_remote_attestation_sessions",
  "oak_remote_attestation_sessions_client",
- "prost 0.11.0",
+ "prost 0.11.2",
  "prost-build 0.11.1",
  "reqwest",
  "wasm-bindgen",
@@ -2635,7 +2635,7 @@ dependencies = [
 name = "oak_grpc_utils"
 version = "0.1.0"
 dependencies = [
- "prost 0.11.0",
+ "prost 0.10.4",
  "prost-build 0.11.1",
  "tempfile",
  "tonic-build 0.8.2",
@@ -2647,7 +2647,7 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "oak_idl_build",
- "prost 0.11.0",
+ "prost 0.11.2",
 ]
 
 [[package]]
@@ -2666,7 +2666,7 @@ dependencies = [
  "maplit",
  "oak_idl",
  "oak_idl_build",
- "prost 0.11.0",
+ "prost 0.11.2",
  "tokio",
 ]
 
@@ -2724,7 +2724,7 @@ dependencies = [
  "anyhow",
  "futures-util",
  "oak_grpc_utils",
- "prost 0.11.0",
+ "prost 0.11.2",
  "tonic 0.8.2",
 ]
 
@@ -2815,7 +2815,7 @@ dependencies = [
  "log",
  "oak_idl",
  "oak_idl_build",
- "prost 0.11.0",
+ "prost 0.11.2",
 ]
 
 [[package]]
@@ -3207,9 +3207,9 @@ dependencies = [
 
 [[package]]
 name = "prost"
-version = "0.11.0"
+version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "399c3c31cdec40583bb68f0b18403400d01ec4289c383aa047560439952c4dd7"
+checksum = "a0841812012b2d4a6145fae9a6af1534873c32aa67fff26bd09f8fa42c83f95a"
 dependencies = [
  "bytes",
  "prost-derive 0.11.0",
@@ -3270,7 +3270,7 @@ dependencies = [
  "log",
  "multimap",
  "petgraph",
- "prost 0.11.0",
+ "prost 0.11.2",
  "prost-types 0.11.1",
  "regex",
  "tempfile",
@@ -3343,7 +3343,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4dfaa718ad76a44b3415e6c4d53b17c8f99160dcb3a99b10470fce8ad43f6e3e"
 dependencies = [
  "bytes",
- "prost 0.11.0",
+ "prost 0.11.2",
 ]
 
 [[package]]
@@ -4584,7 +4584,7 @@ dependencies = [
  "hyper-timeout",
  "percent-encoding",
  "pin-project",
- "prost 0.11.0",
+ "prost 0.11.2",
  "prost-derive 0.11.0",
  "rustls-native-certs",
  "rustls-pemfile 1.0.1",
@@ -4763,7 +4763,7 @@ dependencies = [
  "http",
  "hyper",
  "log",
- "prost 0.10.4",
+ "prost 0.11.2",
  "tokio",
  "tonic 0.7.2",
  "tonic-build 0.7.2",
@@ -4792,7 +4792,7 @@ dependencies = [
  "anyhow",
  "http",
  "hyper",
- "prost 0.10.4",
+ "prost 0.11.2",
  "tokio",
  "tonic 0.7.2",
  "tonic-build 0.7.2",
