@@ -2021,7 +2021,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "log",
- "nix 0.22.3",
+ "nix 0.26.1",
  "simple_logger",
 ]
 
@@ -2041,7 +2041,7 @@ dependencies = [
 name = "oak_enclave_runtime_support"
 version = "0.1.0"
 dependencies = [
- "libm 0.1.4",
+ "libm 0.2.6",
  "linked_list_allocator",
  "log",
  "oak_restricted_kernel_api",
@@ -2119,7 +2119,7 @@ dependencies = [
  "oak_functions_test_utils",
  "oak_remote_attestation_noninteractive",
  "prost 0.11.2",
- "rand 0.4.6",
+ "rand 0.8.5",
  "serde",
  "tokio",
  "tonic",
@@ -2343,7 +2343,7 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "log",
- "nix 0.22.3",
+ "nix 0.26.1",
  "simple_logger",
 ]
 
@@ -2384,12 +2384,12 @@ dependencies = [
  "bytes",
  "getrandom 0.2.8",
  "hkdf",
- "p256 0.9.0",
+ "p256 0.10.1",
  "quickcheck",
  "quickcheck_macros",
  "rand_core 0.6.4",
  "ring",
- "sha2 0.9.9",
+ "sha2 0.10.6",
  "signature",
  "x25519-dalek",
 ]
@@ -2997,7 +2997,7 @@ name = "quirk_echo_service"
 version = "0.1.0"
 dependencies = [
  "async-trait",
- "hashbrown 0.12.3",
+ "hashbrown 0.13.1",
  "log",
  "micro_rpc",
  "micro_rpc_build",
@@ -3151,9 +3151,9 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.7.0"
+version = "1.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e076559ef8e241f2ae3479e36f97bd5741c0330689e217ad51ce2c76808b868a"
+checksum = "48aaa5748ba571fb95cd2c85c09f629215d3a6ece942baa100950af03a34f733"
 dependencies = [
  "aho-corasick",
  "memchr",
